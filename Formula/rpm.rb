@@ -18,7 +18,7 @@ class Rpm < Formula
   end
 
   def install
-    ENV.append 'CPPFLAGS', "-I#{HOMEBREW_PREFIX}/include/nss -I#{HOMEBREW_PREFIX}/include/nspr"
+    ENV.append 'CPPFLAGS', "-I/usr/local/Cellar/nss/3.14.1/include/nss -I#{HOMEBREW_PREFIX}/include/nspr"
     args = %W[
       --disable-dependency-tracking
       --prefix=#{prefix}
